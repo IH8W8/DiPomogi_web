@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Диана Шутова | Психолог</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .text-primary { color: #2C3E50; }
+        .text-secondary { color: #7F8C8D; }
+        .accent-bg { background-color: #E8B4B8; }
+        .accent-text { color: #E8B4B8; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="font-inter text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-playfair text-xl font-semibold text-primary">
+                    <a href="index.html">Диана Шутова</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-secondary hover:text-accent-text transition-colors">Главная</a>
+                    <a href="about.html" class="text-secondary hover:text-accent-text transition-colors">Обо мне</a>
+                    <a href="services.html" class="text-primary hover:text-accent-text transition-colors">Услуги</a>
+                    <a href="contact.html" class="text-secondary hover:text-accent-text transition-colors">Контакты</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-secondary hover:text-accent-text transition-colors">Главная</a>
+                <a href="about.html" class="block px-3 py-2 text-secondary hover:text-accent-text transition-colors">Обо мне</a>
+                <a href="services.html" class="block px-3 py-2 text-primary hover:text-accent-text transition-colors">Услуги</a>
+                <a href="contact.html" class="block px-3 py-2 text-secondary hover:text-accent-text transition-colors">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center reveal">
+                <h1 class="font-playfair text-5xl font-bold text-primary mb-6">Услуги и цены</h1>
+                <p class="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Предлагаю индивидуальные консультации с использованием современных методов психотерапии 
+                    для работы с тревожно-фобическими расстройствами и другими психологическими трудностями
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-playfair text-4xl font-bold text-primary mb-4">Основные услуги</h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    Каждая консультация проводится с учетом индивидуальных особенностей и потребностей клиента
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-gray-50 p-8 rounded-xl reveal">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-semibold text-primary mb-4">Индивидуальная терапия тревожности</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Работа с паническими атаками, генерализованным тревожным расстройством, социальной тревожностью. 
+                        Использую КПТ, АСТ и техники ДБТ для снижения тревожности и развития навыков саморегуляции.
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-sm text-secondary mb-2">Длительность: 55 минут</p>
+                        <p class="text-2xl font-bold text-primary">3 500 ₽</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-gray-50 p-8 rounded-xl reveal">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-semibold text-primary mb-4">Работа с фобиями</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Системная десенсибилизация и переработка через движение глаз (EMDR), когнитивная реструктуризация, 
+                        постепенная экспозиция к страху в безопасной обстановке.
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-sm text-secondary mb-2">Длительность: 55 минут</p>
+                        <p class="text-2xl font-bold text-primary">3 500 ₽</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-gray-50 p-8 rounded-xl reveal">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-semibold text-primary mb-4">Регуляция эмоций</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Обучение навыкам ДБТ для управления интенсивными эмоциями, толерантности к стрессу, 
+                        развитию осознанности и эмоциональной устойчивости.
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-sm text-secondary mb-2">Длительность: 55 минут</p>
+                        <p class="text-2xl font-bold text-primary">3 500 ₽</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-gray-50 p-8 rounded-xl reveal">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-semibold text-primary mb-4">Депрессивные состояния</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Поддержка при депрессии, выгорании, утрате смысла. Комбинирую КПТ с элементами психоанализа 
+                        для работы с корнями депрессии и развития ресурсов.
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-sm text-secondary mb-2">Длительность: 55 минут</p>
+                        <p class="text-2xl font-bold text-primary">3 500 ₽</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-gray-50 p-8 rounded-xl reveal">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-semibold text-primary mb-4">Консультация по запросу</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Работа с конкретными жизненными ситуациями, принятием решений, кризисными моментами. 
+                        Краткосрочная поддержка и разбор конкретной проблемы.
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-sm text-secondary mb-2">Длительность: 55 минут</p>
+                        <p class="text-2xl font-bold text-primary">3 500 ₽</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-gray-50 p-8 rounded-xl reveal">
+                    <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-semibold text-primary mb-4">Первичная консультация</h3>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        Диагностика, сбор анамнеза, постановка целей терапии, разработка индивидуального плана работы. 
+                        Подбор оптимальных методов терапии под ваш запрос.
+                    </p>
+                    <div class="border-t border-gray-200 pt-4">
+                        <p class="text-sm text-secondary mb-2">Длительность: 55 минут</p>
+                        <p class="text-2xl font-bold text-primary">3 500 ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-playfair text-4xl font-bold text-primary mb-4">Как проходит терапия</h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    Структурированный процесс, адаптированный под ваши индивидуальные потребности
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 accent-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="font-playfair text-xl font-semibold text-primary mb-4">Первичная встреча</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Знакомство, сбор анамнеза, постановка целей, разработка плана терапии
+                    </p>
+                </div>
+                
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 accent-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="font-playfair text-xl font-semibold text-primary mb-4">Работа с симптомами</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Снижение остроты симптомов, обучение навыкам самопомощи, стабилизация
+                    </p>
+                </div>
+                
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 accent-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="font-playfair text-xl font-semibold text-primary mb-4">Глубинная работа</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Работа с первопричинами, изменение убеждений, развитие новых паттернов
+                    </p>
+                </div>
+                
+                <div class="text-center reveal">
+                    <div class="w-20 h-20 accent-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="font-playfair text-xl font-semibold text-primary mb-4">Закрепление результатов</h3>
+                    <p class="text-secondary leading-relaxed">
+                        Развитие устойчивых навыков, профилактика рецидивов, завершение терапии
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methods -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="font-playfair text-4xl font-bold text-primary mb-6">Методы, которые я использую</h2>
+                    <p class="text-xl text-secondary mb-8 leading-relaxed">
+                        В своей работе я опираюсь на научно обоснованные методы психотерапии, 
+                        сочетая их для достижения наилучших результатов
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">Когнитивно-поведенческая терапия (КПТ)</h3>
+                                <p class="text-secondary">Работа с мыслями, убеждениями и поведением</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">Терапия принятия ответственности (АСТ)</h3>
+                                <p class="text-secondary">Осознанность, принятие, работа с ценностями</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">Диалектическая поведенческая терапия (ДБТ)</h3>
+                                <p class="text-secondary">Регуляция эмоций, толерантность к стрессу</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
+                            <div>
+                                <h3 class="font-semibold text-primary mb-1">Психоаналитические техники</h3>
+                                <p class="text-secondary">Работа с бессознательным, ранними травмами</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <img src="office_interior.png" alt="Методы терапии" class="w-full rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-playfair text-4xl font-bold text-primary mb-4">Часто задаваемые вопросы</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg reveal">
+                    <h3 class="font-semibold text-primary mb-3">Сколько нужно консультаций для результата?</h3>
+                    <p class="text-secondary">
+                        Это зависит от индивидуальных особенностей и сложности запроса. Обычно для заметных изменений 
+                        требуется от 8-12 сессий, но некоторые клиенты чувствуют улучшение уже после 3-4 встреч.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg reveal">
+                    <h3 class="font-semibold text-primary mb-3">Как часто нужно встречаться?</h3>
+                    <p class="text-secondary">
+                        В начале терапии рекомендую встречаться раз в неделю. По мере стабилизации состояния 
+                        можно перейти на встречи раз в две недели или раз в месяц.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg reveal">
+                    <h3 class="font-semibold text-primary mb-3">Где проходят консультации?</h3>
+                    <p class="text-secondary">
+                        Консультации проводятся онлайн (через видеосвязь) или в комфортном офисе в Санкт-Петербурге. 
+                        Онлайн-формат не менее эффективен и позволяет получать помощь из любой точки.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg reveal">
+                    <h3 class="font-semibold text-primary mb-3">Нужна ли рекомендация психиатра?</h3>
+                    <p class="text-secondary">
+                        Не обязательно. При необходимости я сама рекомендую консультацию психиатра для оценки 
+                        показаний к медикаментозной поддержке. Работаю в команде с проверенными специалистами.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="reveal">
+                <h2 class="font-playfair text-4xl font-bold text-primary mb-6">Готовы начать?</h2>
+                <p class="text-xl text-secondary mb-8 max-w-2xl mx-auto">
+                    Первый шаг к изменениям - это обращение за помощью. 
+                    Давайте обсудим, как я могу поддержать вас на этом пути.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 accent-bg text-white font-medium rounded-lg hover:opacity-90 transition-opacity text-lg">
+                        Записаться на консультацию
+                    </a>
+                    <a href="https://t.me/Di_vadimovna" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors text-lg">
+                        Написать в Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="font-playfair text-2xl font-semibold mb-4">Диана Шутова</div>
+                <p class="text-gray-400 mb-6">Психолог • Санкт-Петербург</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://t.me/Di_vadimovna" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-2.224 10.501c-.155.735-.564.92-1.142.573l-3.437-2.541-1.66 1.597c-.184.184-.336.336-.69.336l.245-3.51 6.36-5.753c.276-.245-.061-.336-.426-.122l-7.88 4.96-3.396-1.057c-.736-.245-.753-.736-.155-.987l13.28-5.122c.245-.092.49.061.245.122z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2025 Диана Шутова. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
