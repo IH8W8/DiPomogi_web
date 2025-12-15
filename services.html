@@ -19,11 +19,33 @@
         .reveal.active { opacity: 1; transform: translateY(0); }
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        
+        /* Решение проблемы с Telegram - добавляем отступ сверху */
+        body {
+            padding-top: 80px; /* Основной отступ для десктопа */
+        }
+        
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px; /* Увеличенный отступ для мобильных */
+            }
+        }
+        
+        /* Корректировка позиционирования навигации */
+        nav {
+            top: 20px; /* Смещаем меню вниз */
+        }
+        
+        /* Корректировка мобильного меню */
+        #mobile-menu {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body class="font-inter text-gray-800">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <nav class="fixed top-20 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="font-playfair text-xl font-semibold text-primary">
