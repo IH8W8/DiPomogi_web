@@ -1,134 +1,300 @@
 <!DOCTYPE html>
+<!-- Объявляет тип документа как HTML5 -->
+
 <html lang="ru">
+<!-- Начало HTML-документа с указанием языка русский -->
+
 <head>
+    <!-- Начало секции head, содержащей метаинформацию о странице -->
+
     <meta charset="UTF-8">
+    <!-- Указывает кодировку страницы UTF-8 для поддержки всех символов -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Настройка отображения на мобильных устройствах: ширина = ширина устройства, масштаб = 100% -->
+
     <title>Диана Шутова - Психолог | Санкт-Петербург</title>
+    <!-- Заголовок страницы, отображается во вкладке браузера -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение фреймворка Tailwind CSS для упрощения стилизации -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!-- Подключение библиотеки Typed.js для создания эффекта печатания текста -->
+
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
+    <!-- Подключение библиотеки Splitting для анимаций текста -->
+
     <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+    <!-- Подключение стилей для библиотеки Splitting -->
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <!-- Подключение шрифтов Playfair Display и Inter с Google Fonts -->
+
     <style>
+        /* Начало пользовательских CSS стилей */
+
         .font-playfair { font-family: 'Playfair Display', serif; }
+        /* Создание CSS класса для использования шрифта Playfair Display */
+
         .font-inter { font-family: 'Inter', sans-serif; }
+        /* Создание CSS класса для использования шрифта Inter */
+
         .hero-bg { background: linear-gradient(135deg, #FDFEFE 0%, #F8F9FA 100%); }
+        /* Создание градиентного фона для hero-секции */
+
         .text-primary { color: #2C3E50; }
+        /* Определение основного цвета текста */
+
         .text-secondary { color: #7F8C8D; }
+        /* Определение второстепенного цвета текста */
+
         .accent-bg { background-color: #E8B4B8; }
+        /* Определение акцентного цвета фона */
+
         .accent-text { color: #E8B4B8; }
+        /* Определение акцентного цвета текста */
+
         .card-hover { transition: all 0.3s ease; }
+        /* Создание плавного перехода для карточек при наведении */
+
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        /* Эффект подъема и тени при наведении на карточку */
+
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        /* Стили для анимации появления элементов */
+
         .reveal.active { opacity: 1; transform: translateY(0); }
+        /* Активное состояние анимации появления */
+
         .typewriter { border-right: 2px solid #E8B4B8; }
-        
+        /* Стиль для эффекта печатной машинки */
+
         /* Решение проблемы с Telegram - добавляем отступ сверху */
         body {
             padding-top: 80px; /* Основной отступ для десктопа */
         }
-        
+        /* Добавление отступа сверху для избежания перекрытия кнопками Telegram */
+
         /* Адаптация для мобильных устройств */
         @media (max-width: 768px) {
             body {
                 padding-top: 100px; /* Увеличенный отступ для мобильных */
             }
         }
-        
+        /* Увеличение отступа на мобильных устройствах */
+
         /* Корректировка позиционирования навигации */
         nav {
             top: 20px; /* Смещаем меню вниз */
         }
-        
+        /* Смещение навигационного меню вниз на 20px */
+
         /* Корректировка мобильного меню */
         #mobile-menu {
             margin-top: 20px;
         }
+        /* Добавление отступа сверху для мобильного меню */
     </style>
+    <!-- Конец пользовательских CSS стилей -->
 </head>
+<!-- Конец секции head -->
+
 <body class="font-inter text-gray-800">
+    <!-- Начало тела страницы с применением шрифта Inter и цвета текста -->
+
     <!-- Navigation -->
+    <!-- Комментарий: Навигационное меню -->
+
     <nav class="fixed top-20 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <!-- Фиксированное навигационное меню с прозрачным белым фоном и размытием -->
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Контейнер с максимальной шириной и автоматическими отступами по бокам -->
+
             <div class="flex justify-between items-center h-16">
+                <!-- Гибкий контейнер для выравнивания элементов по краям с высотой 16 -->
+
                 <div class="font-playfair text-xl font-semibold text-primary">
+                    <!-- Блок с названием сайта, использующий шрифт Playfair Display -->
                     Диана Шутова
+                    <!-- Название сайта -->
                 </div>
+
                 <div class="hidden md:flex space-x-8">
+                    <!-- Скрыто на мобильных, отображается на средних+ экранах с отступами между ссылками -->
                     <a href="#home" class="text-primary hover:text-accent-text transition-colors">Главная</a>
+                    <!-- Ссылка на главную страницу с эффектом при наведении -->
+
                     <a href="about.html" class="text-secondary hover:text-accent-text transition-colors">Обо мне</a>
+                    <!-- Ссылка на страницу "Обо мне" -->
+
                     <a href="services.html" class="text-secondary hover:text-accent-text transition-colors">Услуги</a>
+                    <!-- Ссылка на страницу "Услуги" -->
+
                     <a href="contact.html" class="text-secondary hover:text-accent-text transition-colors">Контакты</a>
+                    <!-- Ссылка на страницу "Контакты" -->
                 </div>
+
                 <div class="md:hidden">
+                    <!-- Отображается только на мобильных устройствах -->
+
                     <button id="mobile-menu-btn" class="text-primary">
+                        <!-- Кнопка для открытия мобильного меню -->
+
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- SVG иконка меню (три горизонтальные линии) -->
+
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <!-- Путь для рисования иконки меню -->
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
+
         <!-- Mobile menu -->
+        <!-- Комментарий: Мобильное меню -->
+
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <!-- Мобильное меню, скрыто на средних+ экранах с белым фоном и верхней границей -->
+
             <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Контейнер с внутренними отступами и вертикальным расстоянием между элементами -->
+
                 <a href="#home" class="block px-3 py-2 text-primary hover:text-accent-text transition-colors">Главная</a>
+                <!-- Ссылка на главную страницу в мобильном меню -->
+
                 <a href="about.html" class="block px-3 py-2 text-secondary hover:text-accent-text transition-colors">Обо мне</a>
+                <!-- Ссылка на страницу "Обо мне" в мобильном меню -->
+
                 <a href="services.html" class="block px-3 py-2 text-secondary hover:text-accent-text transition-colors">Услуги</a>
+                <!-- Ссылка на страницу "Услуги" в мобильном меню -->
+
                 <a href="contact.html" class="block px-3 py-2 text-secondary hover:text-accent-text transition-colors">Контакты</a>
+                <!-- Ссылка на страницу "Контакты" в мобильном меню -->
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
+    <!-- Комментарий: Главная секция страницы -->
+
     <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+        <!-- Секция с градиентным фоном, минимальной высотой экрана и вертикальным центрированием -->
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <!-- Контейнер с максимальной шириной, автоматическими отступами и вертикальными отступами -->
+
             <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Сетка из 2 колонок на больших экранах с отступами между колонками -->
+
                 <div class="reveal">
+                    <!-- Блок с анимацией появления -->
+
                     <h1 class="font-playfair text-5xl lg:text-6xl font-bold text-primary mb-6">
+                        <!-- Заголовок с шрифтом Playfair Display, большим размером и нижним отступом -->
+
                         <span id="typed-text"></span>
+                        <!-- Элемент для эффекта печатания текста -->
                     </h1>
+
                     <p class="text-xl text-secondary mb-8 leading-relaxed">
+                        <!-- Параграф с увеличенным текстом, второстепенным цветом и нижним отступом -->
+
                         Помогаю справляться с тревожно-фобическими расстройствами через интегративный подход и индивидуальную терапию
+                        <!-- Описание деятельности психолога -->
                     </p>
+
                     <div class="flex flex-col sm:flex-row gap-4">
+                        <!-- Гибкий контейнер с вертикальной стопкой на мобильных и горизонтальной на больших экранах -->
+
                         <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 accent-bg text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+                            <!-- Кнопка с акцентным фоном, белым текстом и эффектом при наведении -->
+
                             Записаться на консультацию
+                            <!-- Текст кнопки -->
                         </a>
+
                         <a href="about.html" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors">
+                            <!-- Кнопка с рамкой, которая меняется при наведении -->
+
                             Узнать больше
+                            <!-- Текст кнопки -->
                         </a>
                     </div>
                 </div>
+
                 <div class="reveal">
+                    <!-- Блок с анимацией появления -->
+
                     <img src="psychologist_portrait.png" alt="Диана Шутова - психолог" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                    <!-- Изображение психолога с закругленными углами и тенью -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Preview -->
+    <!-- Комментарий: Предварительная информация о подходе -->
+
     <section class="py-20 bg-white">
+        <!-- Секция с вертикальными отступами и белым фоном -->
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Контейнер с максимальной шириной и автоматическими отступами -->
+
             <div class="text-center mb-16 reveal">
-                <h2 class="font-playfair text-4xl font-bold text-primary mb-4">Профессиональный подход</h2>
+                <!-- Центрированный текст с нижним отступом и анимацией -->
+
+                <h2 class="font-playfair text-4xl font-bold text-primary mb-4">
+                    <!-- Заголовок второго уровня -->
+
+                    Профессиональный подход
+                    <!-- Текст заголовка -->
+                </h2>
+
                 <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    <!-- Параграф с увеличенным текстом и ограничением ширины -->
+
                     Работаю в интегративном подходе, сочетая современные методы терапии для достижения устойчивых результатов
+                    <!-- Описание подхода -->
                 </p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Сетка с 2 колонками на средних экранах и 4 на больших -->
+
                 <div class="card-hover bg-gray-50 p-8 rounded-xl text-center reveal">
+                    <!-- Карточка с эффектом при наведении, серым фоном, отступами и анимацией -->
+
                     <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <!-- Круглая иконка с акцентным фоном и центрированием -->
+
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- SVG иконка -->
+
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            <!-- Путь для рисования иконки -->
                         </svg>
                     </div>
-                    <h3 class="font-playfair text-xl font-semibold text-primary mb-2">КПТ</h3>
-                    <p class="text-secondary">Когнитивно-поведенческая терапия для работы с мыслями и поведением</p>
+
+                    <h3 class="font-playfair text-xl font-semibold text-primary mb-2">
+                        <!-- Заголовок третьего уровня -->
+
+                        КПТ
+                        <!-- Название метода -->
+                    </h3>
+
+                    <p class="text-secondary">
+                        <!-- Параграф с второстепенным цветом текста -->
+
+                        Когнитивно-поведенческая терапия для работы с мыслями и поведением
+                        <!-- Описание метода -->
+                    </p>
                 </div>
-                
+
+                <!-- Аналогичные карточки для других методов терапии -->
                 <div class="card-hover bg-gray-50 p-8 rounded-xl text-center reveal">
                     <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +304,7 @@
                     <h3 class="font-playfair text-xl font-semibold text-primary mb-2">АСТ</h3>
                     <p class="text-secondary">Терапия принятия ответственности для осознанности и принятия</p>
                 </div>
-                
+
                 <div class="card-hover bg-gray-50 p-8 rounded-xl text-center reveal">
                     <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +314,7 @@
                     <h3 class="font-playfair text-xl font-semibold text-primary mb-2">Психоанализ</h3>
                     <p class="text-secondary">Глубинная работа с бессознательными процессами и конфликтами</p>
                 </div>
-                
+
                 <div class="card-hover bg-gray-50 p-8 rounded-xl text-center reveal">
                     <div class="w-16 h-16 accent-bg rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,22 +329,63 @@
     </section>
 
     <!-- Services Preview -->
+    <!-- Комментарий: Предварительная информация об услугах -->
+
     <section class="py-20 bg-gray-50">
+        <!-- Секция с серым фоном и вертикальными отступами -->
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Контейнер с максимальной шириной и автоматическими отступами -->
+
             <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Сетка из 2 колонок на больших экранах -->
+
                 <div class="reveal">
+                    <!-- Блок с анимацией появления -->
+
                     <img src="office_interior.png" alt="Кабинет психолога" class="w-full rounded-2xl shadow-xl">
+                    <!-- Изображение кабинета психолога -->
                 </div>
+
                 <div class="reveal">
-                    <h2 class="font-playfair text-4xl font-bold text-primary mb-6">Индивидуальные консультации</h2>
+                    <!-- Блок с анимацией появления -->
+
+                    <h2 class="font-playfair text-4xl font-bold text-primary mb-6">
+                        <!-- Заголовок второго уровня -->
+
+                        Индивидуальные консультации
+                        <!-- Текст заголовка -->
+                    </h2>
+
                     <div class="space-y-6">
+                        <!-- Контейнер с вертикальным расстоянием между элементами -->
+
                         <div class="flex items-start space-x-4">
+                            <!-- Гибкий контейнер с элементами по левому краю и горизонтальным расстоянием -->
+
                             <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
+                            <!-- Круглая точка с акцентным фоном -->
+
                             <div>
-                                <h3 class="font-semibold text-primary mb-1">Тревожно-фобические расстройства</h3>
-                                <p class="text-secondary">Работа с паническими атаками, фобиями, генерализованным тревожным расстройством</p>
+                                <!-- Контейнер для текста -->
+
+                                <h3 class="font-semibold text-primary mb-1">
+                                    <!-- Заголовок третьего уровня с жирным шрифтом -->
+
+                                    Тревожно-фобические расстройства
+                                    <!-- Название услуги -->
+                                </h3>
+
+                                <p class="text-secondary">
+                                    <!-- Параграф с второстепенным цветом текста -->
+
+                                    Работа с паническими атаками, фобиями, генерализованным тревожным расстройством
+                                    <!-- Описание услуги -->
+                                </p>
                             </div>
                         </div>
+
+                        <!-- Аналогичные блоки для других услуг -->
                         <div class="flex items-start space-x-4">
                             <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
                             <div>
@@ -186,6 +393,7 @@
                                 <p class="text-secondary">Поддержка при депрессии, выгорании, утрате смысла и мотивации</p>
                             </div>
                         </div>
+
                         <div class="flex items-start space-x-4">
                             <div class="w-6 h-6 accent-bg rounded-full flex-shrink-0 mt-1"></div>
                             <div>
@@ -194,14 +402,36 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="mt-8 p-6 bg-white rounded-xl border border-gray-200">
+                        <!-- Блок с отступом сверху, белым фоном, закругленными углами и рамкой -->
+
                         <div class="flex justify-between items-center">
+                            <!-- Гибкий контейнер с элементами по краям и вертикальным центрированием -->
+
                             <div>
-                                <h4 class="font-playfair text-2xl font-bold text-primary">3 500 ₽</h4>
-                                <p class="text-secondary">55 минут консультации</p>
+                                <!-- Контейнер для информации о цене -->
+
+                                <h4 class="font-playfair text-2xl font-bold text-primary">
+                                    <!-- Заголовок четвертого уровня -->
+
+                                    3 500 ₽
+                                    <!-- Цена услуги -->
+                                </h4>
+
+                                <p class="text-secondary">
+                                    <!-- Параграф с второстепенным цветом текста -->
+
+                                    55 минут консультации
+                                    <!-- Длительность услуги -->
+                                </p>
                             </div>
+
                             <a href="contact.html" class="px-6 py-3 accent-bg text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+                                <!-- Кнопка с акцентным фоном и эффектом при наведении -->
+
                                 Записаться
+                                <!-- Текст кнопки -->
                             </a>
                         </div>
                     </div>
@@ -211,19 +441,46 @@
     </section>
 
     <!-- Contact CTA -->
+    <!-- Комментарий: Призыв к действию для связи -->
+
     <section class="py-20 bg-white">
+        <!-- Секция с белым фоном и вертикальными отступами -->
+
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Контейнер с максимальной шириной, автоматическими отступами и центрированным текстом -->
+
             <div class="reveal">
-                <h2 class="font-playfair text-4xl font-bold text-primary mb-6">Готовы начать путь к изменениям?</h2>
+                <!-- Блок с анимацией появления -->
+
+                <h2 class="font-playfair text-4xl font-bold text-primary mb-6">
+                    <!-- Заголовок второго уровня -->
+
+                    Готовы начать путь к изменениям?
+                    <!-- Текст заголовка -->
+                </h2>
+
                 <p class="text-xl text-secondary mb-8 max-w-2xl mx-auto">
+                    <!-- Параграф с увеличенным текстом и ограничением ширины -->
+
                     Первый шаг к изменениям - это обращение за помощью. Я здесь, чтобы поддержать вас на этом пути.
+                    <!-- Призыв к действию -->
                 </p>
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <!-- Гибкий контейнер с вертикальной стопкой на мобильных и горизонтальной на больших экранах -->
+
                     <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 accent-bg text-white font-medium rounded-lg hover:opacity-90 transition-opacity text-lg">
+                        <!-- Кнопка с акцентным фоном, белым текстом и эффектом при наведении -->
+
                         Записаться на консультацию
+                        <!-- Текст кнопки -->
                     </a>
+
                     <a href="https://t.me/Di_vadimovna" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition-colors text-lg">
+                        <!-- Кнопка с рамкой, которая меняется при наведении -->
+
                         Написать в Telegram
+                        <!-- Текст кнопки -->
                     </a>
                 </div>
             </div>
@@ -231,25 +488,66 @@
     </section>
 
     <!-- Footer -->
+    <!-- Комментарий: Нижний колонтитул страницы -->
+
     <footer class="bg-gray-900 text-white py-12">
+        <!-- Подвал с темным фоном, белым текстом и вертикальными отступами -->
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Контейнер с максимальной шириной и автоматическими отступами -->
+
             <div class="text-center">
-                <div class="font-playfair text-2xl font-semibold mb-4">Диана Шутова</div>
-                <p class="text-gray-400 mb-6">Психолог • Санкт-Петербург</p>
+                <!-- Центрированный текст -->
+
+                <div class="font-playfair text-2xl font-semibold mb-4">
+                    <!-- Блок с шрифтом Playfair Display и нижним отступом -->
+
+                    Диана Шутова
+                    <!-- Имя психолога -->
+                </div>
+
+                <p class="text-gray-400 mb-6">
+                    <!-- Параграф с серым цветом текста и нижним отступом -->
+
+                    Психолог • Санкт-Петербург
+                    <!-- Профессия и город -->
+                </p>
+
                 <div class="flex justify-center space-x-6 mb-8">
+                    <!-- Гибкий контейнер с центрированием и горизонтальным расстоянием -->
+
                     <a href="https://t.me/Di_vadimovna" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <!-- Ссылка на Telegram с эффектом при наведении -->
+
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- SVG иконка Telegram -->
+
                             <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-2.224 10.501c-.155.735-.564.92-1.142.573l-3.437-2.541-1.66 1.597c-.184.184-.336.336-.69.336l.245-3.51 6.36-5.753c.276-.245-.061-.336-.426-.122l-7.88 4.96-3.396-1.057c-.736-.245-.753-.736-.155-.987l13.28-5.122c.245-.092.49.061.245.122z"/>
+                            <!-- Путь для рисования иконки Telegram -->
                         </svg>
                     </a>
                 </div>
+
                 <p class="text-gray-500 text-sm">
+                    <!-- Параграф с серым цветом текста и уменьшенным размером -->
+
                     © 2025 Диана Шутова. Все права защищены.
+                    <!-- Информация об авторских правах -->
                 </p>
             </div>
         </div>
     </footer>
 
     <script src="main.js"></script>
+    <!-- Подключение внешнего JavaScript файла -->
 </body>
+<!-- Конец тела страницы -->
+
 </html>
+<!-- Конец HTML-документа
+HTML-структура - основа веб-страницы с разделением на head (метаинформация) и body (содержимое)
+CSS-стили - определяют внешний вид элементов
+Tailwind CSS - упрощает стилизацию через классы
+JavaScript-библиотеки - добавляют интерактивность и анимации
+Адаптивность - страница корректно отображается на разных устройствах
+Решение проблемы с Telegram - добавлены отступы для избежания перекрытия кнопками Telegram-->
